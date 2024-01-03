@@ -384,7 +384,7 @@ enhanced-mode-by-rule = true
 
 {% endif %}
 
-{% if request.target == "mac-surge" %}
+{% if request.target == "surge-mac" %}
 
 [General]
 # ================ iOS和MacOS共同的 Surge 参数 ================ #
@@ -532,7 +532,7 @@ keyword-filter=(null)
 
 {% endif %}
 
-{% if request.target == "ios-surge" %}
+{% if request.target == "surge-ios" %}
 
 [General]
 # ================ iOS和MacOS共同的 Surge 参数 ================ #
