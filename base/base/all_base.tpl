@@ -20,6 +20,7 @@ Proxy: ~
 Proxy Group: ~
 Rule: ~
 {% endif %}
+{% endif %}
 
 {% endif %}
 {% if request.target == "surge" %}
