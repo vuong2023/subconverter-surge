@@ -66,3 +66,8 @@
 纯手工对着官方的参数详情，一行一行翻译的
 
 地址：[https://www.inextops.com/mac/surge/](https://www.inextops.com/mac/surge/)
+
+
+## 本地化使用
+
+请修改根目录下的4个`pref`开头的文件，将`managed_config_prefix=https://api-subconverter.inextops.com改`为`managed_config_prefix=http://127.0.0.1:25500`
