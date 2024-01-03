@@ -760,6 +760,62 @@ std::string subconverter(RESPONSE_CALLBACK_ARGS)
                  + " strict=" + std::string(strict ? "true" : "false") + "\n\n" + output_content;
         }
         break;
+    case "surge-macos"_hash:
+
+        writeLog(0, "Generate target: Surge5 for MacOS " + std::to_string(intSurgeVer), LOG_LEVEL_INFO);
+
+        if(ext.nodelist)
+        {
+            output_content = proxyToSurge(nodes, base_content, dummy_ruleset, dummy_group, intSurgeVer, ext);
+
+            if(argUpload)
+                uploadGist("surge5" + argSurgeVer + "list", argUploadPath, output_content, true);
+        }
+        else
+        {
+            if(render_template(fetchFile(lSurgeBase, proxy, global.cacheConfig), tpl_args, base_content, global.templatePath) != 0)
+            {
+                *status_code = 400;
+                return base_content;
+            }
+            output_content = proxyToSurge(nodes, base_content, lRulesetContent, lCustomProxyGroups, intSurgeVer, ext);
+
+            if(argUpload)
+                uploadGist("surge" + argSurgeVer, argUploadPath, output_content, true);
+
+            if(global.writeManagedConfig && !global.managedConfigPrefix.empty())
+                output_content = "#!MANAGED-CONFIG " + managed_url + (interval ? " interval=" + std::to_string(interval) : "") \
+                 + " strict=" + std::string(strict ? "true" : "false") + "\n\n" + output_content;
+        }
+        break;
+    case "surge-ios"_hash:
+
+        writeLog(0, "Generate target: Surge5 for IOS " + std::to_string(intSurgeVer), LOG_LEVEL_INFO);
+
+        if(ext.nodelist)
+        {
+            output_content = proxyToSurge(nodes, base_content, dummy_ruleset, dummy_group, intSurgeVer, ext);
+
+            if(argUpload)
+                uploadGist("surge5" + argSurgeVer + "list", argUploadPath, output_content, true);
+        }
+        else
+        {
+            if(render_template(fetchFile(lSurgeBase, proxy, global.cacheConfig), tpl_args, base_content, global.templatePath) != 0)
+            {
+                *status_code = 400;
+                return base_content;
+            }
+            output_content = proxyToSurge(nodes, base_content, lRulesetContent, lCustomProxyGroups, intSurgeVer, ext);
+
+            if(argUpload)
+                uploadGist("surge5" + argSurgeVer, argUploadPath, output_content, true);
+
+            if(global.writeManagedConfig && !global.managedConfigPrefix.empty())
+                output_content = "#!MANAGED-CONFIG " + managed_url + (interval ? " interval=" + std::to_string(interval) : "") \
+                 + " strict=" + std::string(strict ? "true" : "false") + "\n\n" + output_content;
+        }
+        break;
     case "surfboard"_hash:
         writeLog(0, "Generate target: Surfboard", LOG_LEVEL_INFO);
 
