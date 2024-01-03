@@ -20,8 +20,6 @@ Proxy: ~
 Proxy Group: ~
 Rule: ~
 {% endif %}
-
-
 {% endif %}
 {% if request.target == "surge" %}
 
@@ -384,7 +382,7 @@ enhanced-mode-by-rule = true
 
 {% endif %}
 
-{% if request.target == "surge-mac" %}
+{% if request.target == "surge-macos" %}
 
 [General]
 # ================ iOS和MacOS共同的 Surge 参数 ================ #
