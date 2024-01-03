@@ -646,8 +646,8 @@ std::string proxyToSurge(std::vector<Proxy> &nodes, const std::string &base_conf
 
     ini.store_any_line = true;
     // filter out sections that requires direct-save
-    writeLog(0, "Surge Profile: " + ini.add_direct_save_section("General"), LOG_LEVEL_ERROR);
-    writeLog(0, "Surge base_conf: " + base_conf, LOG_LEVEL_ERROR);
+//    writeLog(0, "Surge Profile: " + ini.add_direct_save_section("General"), LOG_LEVEL_ERROR);
+//    writeLog(0, "Surge base_conf: " + base_conf, LOG_LEVEL_ERROR);
     ini.add_direct_save_section("General");
     ini.add_direct_save_section("Replica");
     ini.add_direct_save_section("Rule");
