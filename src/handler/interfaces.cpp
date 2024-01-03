@@ -320,7 +320,7 @@ std::string subconverter(RESPONSE_CALLBACK_ARGS)
     case "ss"_hash: case "ssd"_hash: case "ssr"_hash: case "sssub"_hash: case "v2ray"_hash: case "trojan"_hash: case "mixed"_hash:
         lSimpleSubscription = true;
         break;
-    case "clash"_hash: case "clashr"_hash: case "surge"_hash: case "surge-mac"_hash: case "surge-ios"_hash: case "quan"_hash: case "quanx"_hash: case "loon"_hash: case "surfboard"_hash: case "mellow"_hash: case "singbox"_hash:
+    case "clash"_hash: case "clashr"_hash: case "surge"_hash: case "surge-macos"_hash: case "surge-ios"_hash: case "quan"_hash: case "quanx"_hash: case "loon"_hash: case "surfboard"_hash: case "mellow"_hash: case "singbox"_hash:
         break;
     default:
         *status_code = 400;
