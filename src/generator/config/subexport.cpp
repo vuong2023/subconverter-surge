@@ -637,7 +637,7 @@ std::string generatePeer(Proxy &node, bool client_id_as_reserved = false)
 
 std::string proxyToSurge(std::vector<Proxy> &nodes, const std::string &base_conf, std::vector<RulesetContent> &ruleset_content_array, const ProxyGroupConfigs &extra_proxy_group, int surge_ver, extra_settings &ext)
 {
-    writeLog(0, "Surge base_conf: " + base_conf, LOG_LEVEL_ERROR);
+
     INIReader ini;
     std::string output_nodelist;
     std::vector<Proxy> nodelist;
@@ -647,6 +647,7 @@ std::string proxyToSurge(std::vector<Proxy> &nodes, const std::string &base_conf
     ini.store_any_line = true;
     // filter out sections that requires direct-save
     writeLog(0, "Surge Profile: " + ini.add_direct_save_section("General"), LOG_LEVEL_ERROR);
+    writeLog(0, "Surge base_conf: " + base_conf, LOG_LEVEL_ERROR);
     ini.add_direct_save_section("General");
     ini.add_direct_save_section("Replica");
     ini.add_direct_save_section("Rule");
