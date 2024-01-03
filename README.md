@@ -60,3 +60,9 @@
 | Surge 5 IOS   |   ✓   |    ✓   | surge-ios&ver=5   |
 | Surge 5 MacOS |   ✓   |    ✓   | surge-macos&ver=5 |
 
+
+## 配置文件详解
+
+纯手工对着官方的参数详情，一行一行翻译的
+
+地址：[https://www.inextops.com/mac/surge/](https://www.inextops.com/mac/surge/)
