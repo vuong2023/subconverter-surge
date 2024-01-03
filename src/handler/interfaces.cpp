@@ -762,7 +762,7 @@ std::string subconverter(RESPONSE_CALLBACK_ARGS)
         break;
     case "surge-macos"_hash:
 
-        writeLog(0, "Generate target: Surge for MacOS " + std::to_string(intSurgeVer), LOG_LEVEL_INFO);
+        writeLog(0, "Generate target: Surge " + std::to_string(intSurgeVer) + " for MacOS", LOG_LEVEL_INFO);
 
         if(ext.nodelist)
         {
@@ -790,7 +790,7 @@ std::string subconverter(RESPONSE_CALLBACK_ARGS)
         break;
     case "surge-ios"_hash:
 
-        writeLog(0, "Generate target: Surge for IOS " + std::to_string(intSurgeVer), LOG_LEVEL_INFO);
+        writeLog(0, "Generate target: Surge " + std::to_string(intSurgeVer) + " for iOS", LOG_LEVEL_INFO);
 
         if(ext.nodelist)
         {
