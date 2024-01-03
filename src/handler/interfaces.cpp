@@ -762,14 +762,14 @@ std::string subconverter(RESPONSE_CALLBACK_ARGS)
         break;
     case "surge-macos"_hash:
 
-        writeLog(0, "Generate target: Surge5 for MacOS " + std::to_string(intSurgeVer), LOG_LEVEL_INFO);
+        writeLog(0, "Generate target: Surge for MacOS " + std::to_string(intSurgeVer), LOG_LEVEL_INFO);
 
         if(ext.nodelist)
         {
             output_content = proxyToSurge(nodes, base_content, dummy_ruleset, dummy_group, intSurgeVer, ext);
 
             if(argUpload)
-                uploadGist("surge5" + argSurgeVer + "list", argUploadPath, output_content, true);
+                uploadGist("surge" + argSurgeVer + "list", argUploadPath, output_content, true);
         }
         else
         {
@@ -790,14 +790,14 @@ std::string subconverter(RESPONSE_CALLBACK_ARGS)
         break;
     case "surge-ios"_hash:
 
-        writeLog(0, "Generate target: Surge5 for IOS " + std::to_string(intSurgeVer), LOG_LEVEL_INFO);
+        writeLog(0, "Generate target: Surge for IOS " + std::to_string(intSurgeVer), LOG_LEVEL_INFO);
 
         if(ext.nodelist)
         {
             output_content = proxyToSurge(nodes, base_content, dummy_ruleset, dummy_group, intSurgeVer, ext);
 
             if(argUpload)
-                uploadGist("surge5" + argSurgeVer + "list", argUploadPath, output_content, true);
+                uploadGist("surge" + argSurgeVer + "list", argUploadPath, output_content, true);
         }
         else
         {
