@@ -264,6 +264,14 @@ uri = "/surge"
 target = "/sub?target=surge"
 
 [[aliases]]
+uri = "/mac-surge"
+target = "/sub?target=mac-surge"
+
+[[aliases]]
+uri = "/ios-surge"
+target = "/sub?target=ios-surge"
+
+[[aliases]]
 uri = "/quan"
 target = "/sub?target=quan"
 

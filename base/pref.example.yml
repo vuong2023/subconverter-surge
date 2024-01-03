@@ -116,6 +116,8 @@ aliases:
   - {uri: /clash, target: "/sub?target=clash"}
   - {uri: /clashr, target: "/sub?target=clashr"}
   - {uri: /surge, target: "/sub?target=surge"}
+  - { uri: /mac-surge, target: "/sub?target=mac-surge" }
+  - { uri: /ios-surge, target: "/sub?target=ios-surge" }
   - {uri: /quan, target: "/sub?target=quan"}
   - {uri: /quanx, target: "/sub?target=quanx"}
   - {uri: /mellow, target: "/sub?target=mellow"}
