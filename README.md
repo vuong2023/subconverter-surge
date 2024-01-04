@@ -7,7 +7,7 @@
 [![GitHub release](https://img.shields.io/github/release/tindy2013/subconverter.svg)](https://github.com/tindy2013/subconverter/releases)
 [![GitHub license](https://img.shields.io/github/license/tindy2013/subconverter.svg)](https://github.com/tindy2013/subconverter/blob/master/LICENSE)
 
-需要配合前端chenyk/sub(即将上传至github)使用，或者修改URL的`target`为`surge-ios&ver=5`或者`surge-macos&ver=5`。
+需要配合前端[chenyk/sub-web](https://github.com/chenyk1219/sub-web)使用，或者修改URL的`target`为`surge-ios&ver=5`或者`surge-macos&ver=5`。
 
 
 
