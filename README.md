@@ -1,5 +1,7 @@
 # subconverter
 
+最新使用说明文档：[https://www.inextops.com/tools/sub/](https://www.inextops.com/tools/sub/)
+
 本仓库Fork了[tindy2013/subconverter](https://github.com/tindy2013/subconverter)的代码，增加了对Surge 5的支持。因为Surge 5的配置文件格式与Surge 4不同，所以需要修改代码，增加了`surge-ios`和`surge-macos`两个参数，用于区分Surge 5的配置文件格式。
 
 [![Build Status](https://github.com/tindy2013/subconverter/actions/workflows/build.yml/badge.svg)](https://github.com/tindy2013/subconverter/actions)
