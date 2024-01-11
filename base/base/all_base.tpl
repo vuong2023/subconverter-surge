@@ -168,8 +168,8 @@ STATE,AUTO
 [general]
 excluded_routes=192.168.0.0/16, 172.16.0.0/12, 100.64.0.0/10, 10.0.0.0/8
 geo_location_checker=http://ip-api.com/json/?lang=zh-CN, https://github.com/KOP-XIAO/QuantumultX/raw/master/Scripts/IP_API.js
-network_check_url=http://www.baidu.com/
-server_check_url=http://www.gstatic.com/generate_204
+network_check_url=http://223.6.6.6
+server_check_url=http://1.0.0.1/generate_204
 
 [dns]
 server=119.29.29.29
@@ -418,9 +418,9 @@ show-error-page-for-reject = true
 # > 默认情况下，Surge VIF 接口将自身声明为默认路由。但是，由于 Wi-Fi 接口的路由较小，因此某些流量可能无法通过浪涌 VIF 接口。使用此选项可添加较小的路由。
 # tun-included-routes =
 # > Internet 连接测试的 URL, 以及，DIRECT 策略的测试 URL
-internet-test-url = http://connect.rom.miui.com/generate_204
+internet-test-url = http://223.6.6.6
 # > 代理策略的默认测试 URL
-proxy-test-url = http://www.gstatic.com/generate_204
+proxy-test-url = http://1.0.0.1/generate_204
 # > 连接测试超时（秒）
 test-timeout = 5
 # > 始终真实的 IP 此选项要求 Surge 在 Surge VIF 处理 DNS 问题时返回真实 IP 地址而不是虚假 IP 地址 DNS数据包将被转发到上游DNS服务器 此参数属于主机列表类型，详细规则请参见：https://manual.nssurge.com/others/host-list.html
@@ -566,9 +566,9 @@ show-error-page-for-reject = true
 # > 默认情况下，Surge VIF 接口将自身声明为默认路由。但是，由于 Wi-Fi 接口的路由较小，因此某些流量可能无法通过浪涌 VIF 接口。使用此选项可添加较小的路由。
 # tun-included-routes =
 # > Internet 连接测试的 URL, 以及，DIRECT 策略的测试 URL
-internet-test-url = http://connect.rom.miui.com/generate_204
+internet-test-url = http://223.6.6.6
 # > 代理策略的默认测试 URL
-proxy-test-url = http://www.gstatic.com/generate_204
+proxy-test-url = http://1.0.0.1/generate_204
 # > 连接测试超时（秒）
 test-timeout = 5
 # > 始终真实的 IP 此选项要求 Surge 在 Surge VIF 处理 DNS 问题时返回真实 IP 地址而不是虚假 IP 地址 DNS数据包将被转发到上游DNS服务器 此参数属于主机列表类型，详细规则请参见：https://manual.nssurge.com/others/host-list.html
@@ -637,7 +637,7 @@ include-cellular-services = false
 # > 3：VIF Takeover Only：最新版本的默认工作模式。
 # > 4：代理接管 + VIF，但代理使用 VIF 地址而不是环回地址。
 # > 5：代理接管+VIF，但VIF路由使用多个较小的路由进行接管，没有配置默认路由，可以用来绕过一些特殊问题。（例如，HomeKit 安防摄像头）
-compatibility-mode = 1
+compatibility-mode = 5
 # ================ 仅限 MacOS 的 Surge 参数 ================ #
 # > 如果禁用，即使 Wi-Fi 不是主网络接口，SSID/BSSID 模式仍可匹配。
 # use-default-policy-if-wifi-not-primary = false
