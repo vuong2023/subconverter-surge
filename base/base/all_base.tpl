@@ -178,16 +178,16 @@ server=1.0.0.1
 server=8.8.8.8
 
 [policy]
-static=♻️ 自动选择, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Auto.png
-static=🔰 节点选择, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Proxy.png
-static=🌍 国外媒体, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/GlobalMedia.png
-static=🌏 国内媒体, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/DomesticMedia.png
-static=Ⓜ️ 微软服务, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Microsoft.png
-static=📲 电报信息, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Telegram.png
-static=🍎 苹果服务, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Apple.png
-static=🎯 全球直连, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Direct.png
-static=🛑 全球拦截, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Advertising.png
-static=🐟 漏网之鱼, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Final.png
+static=♻️ Tự động, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Auto.png
+static=🔰 Lựa chọn nút, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Proxy.png
+static=🌍 Truyền thông nước ngoài, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/GlobalMedia.png
+static=🌏 Truyền thông trong nước, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/DomesticMedia.png
+static=Ⓜ️ Microsoft, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Microsoft.png
+static=📲 Telegram, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Telegram.png
+static=🍎 Apple, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Apple.png
+static=🎯 Kết nối trực tiếp toàn cầu, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Direct.png
+static=🛑 Đánh chặn toàn cầu, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Advertising.png
+static=🐟 Một con cá đã lọt lưới, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Final.png
 
 [server_remote]
 
@@ -385,130 +385,130 @@ enhanced-mode-by-rule = true
 {% if request.target == "surge-macos" %}
 
 [General]
-# ================ iOS和MacOS共同的 Surge 参数 ================ #
-# > 日志级别 verbose, info, notify, or warning 不建议在日常使用中启用详细，因为这会显著降低性能。
+# ================ iOS & MacOS chung Surge tham số ================ #
+# > Mức đăng nhập verbose, info, notify, or warning Việc kích hoạt dài dòng không được khuyến khích sử dụng hàng ngày vì nó có thể làm giảm đáng kể hiệu suất.
 loglevel = notify
-# > IPv6协议 启用完整的 IPv6 支持。具体来说，开启该选项后，访问域名时会查询该域名的AAAA记录。即使未启用此选项，也可以通过直接访问 IPv6 地址来访问 IPv6 站点。
+# > Giao thức IPv6 Cho phép hỗ trợ IPv6 đầy đủ. Cụ thể, sau khi bật tùy chọn này, bản ghi AAAA của tên miền sẽ được truy vấn khi truy cập vào tên miền. Ngay cả khi tùy chọn này không được bật, các trang web IPv6 vẫn có thể được truy cập bằng cách truy cập trực tiếp vào địa chỉ IPv6.
 ipv6 = false
-# > 允许 IPv6 通过 Surge VIF。当您希望 Surge 处理连接到 IPv6 地址的原始 TCP 连接时很有用。
-# > off ：切勿使用 IPv6 设置 Surge VIF
-# > auto ：仅当本地网络具有有效的 IPv6 网络时，才使用 IPv6 设置 Surge VIF
-# > always ：始终使用 IPv6 设置 Surge VIF
+# > Cho phép IPv6 thông qua Surge VIF. Hữu ích khi bạn muốn Surge xử lý các kết nối TCP thô tới địa chỉ IPv6.
+# > off ：Không bao giờ sử dụng IPv6 để thiết lập Surge VIF
+# > auto ：Chỉ thiết lập Surge VIF với IPv6 nếu mạng cục bộ có mạng IPv6 hợp lệ
+# > always ：Luôn thiết lập Surge VIF với IPv6
 ipv6-vif = false
-# > dns服务器 上游DNS服务器的IP地址
+# > địa chỉ IP máy chủ dns của máy chủ DNS ngược tuyến
 # dns-server = system, 223.5.5.5, 119.29.29.29, 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 9.9.9.9:995
 # doh-server = https://223.5.5.5/dns-query, https://1.12.12.12/dns-query, https://8.8.8.8/dns-query, https://1.1.1.1/dns-query
-# > 跳过代理 在 iOS 版本中，此选项强制与这些域/IP 范围的连接由 Surge VIF 而不是 Surge 代理处理。在 macOS 版本中，当启用“设置为系统代理”时，这些设置将应用于系统。此选项用于修复某些应用的兼容性问题。
+# > Bỏ qua proxy Trong phiên bản iOS, tùy chọn này buộc các kết nối đến các miền/dải IP này phải được xử lý bởi Surge VIF thay vì proxy Surge. Trong các phiên bản macOS, khi bật Set as System Proxy, các cài đặt này sẽ được áp dụng cho hệ thống. Tùy chọn này được sử dụng để khắc phục sự cố tương thích với một số ứng dụng.
 # > apple.com、*apple.com、192.168.2.* or 192.168.2.0/24
-# > 注意：如果输入 IP 地址或地址范围，则只有在使用该地址连接到该主机时才能绕过代理，而不能在通过解析为该地址的域名连接到主机时绕过代理。
+# > Lưu ý: Nếu bạn nhập địa chỉ IP hoặc dải địa chỉ, proxy sẽ chỉ bị bỏ qua khi kết nối với máy chủ đó bằng địa chỉ đó chứ không phải khi kết nối với máy chủ qua tên miền phân giải theo địa chỉ đó.
 skip-proxy = localhost, *.local, 0.0.0.0/8, 10.0.0.0/8, 17.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 172.17.0.0/12, 172.18.0.0/12, 172.19.0.0/12, 172.20.0.0/24, 192.0.0.0/24, 192.0.2.0/24, 192.168.0.0/16, 192.88.99.0/24, 198.18.0.0/15, 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 240.0.0.0/4, 255.255.255.255/32, 117.71.53.199/32, 47.75.120.166/32,
-# > 排除简单主机名 就像 skip-proxy 参数一样。此选项允许请求使用由 Surge VIF 而不是 Surge 代理处理的简单主机名（不带点）。
+# > Loại trừ các tên máy chủ đơn giản giống như tham số Skip-proxy. Tùy chọn này cho phép các yêu cầu sử dụng tên máy chủ đơn giản (không có dấu chấm) được xử lý bởi Surge VIF thay vì tác nhân Surge.
 # > mysql01、redis01
 exclude-simple-hostnames = true
-# > 外部控制器访问 此选项允许外部控制器控制 Surge，例如 Surge Dashboard （macOS） 和 Surge iOS 遥控器 （iOS）。例如：key@0.0.0.0:6166
+# > Truy cập bộ điều khiển bên ngoài Tùy chọn này cho phép bộ điều khiển bên ngoài điều khiển Surge, chẳng hạn như Bảng điều khiển Surge (macOS) và Điều khiển từ xa Surge iOS (iOS). Ví dụ: key@0.0.0.0:6166
 external-controller-access = mima1234@0.0.0.0:6166
-# > 使用 HTTPS 协议而不是 HTTP。必须先配置 MitM CA 证书。您需要在客户端设备上手动安装证书。
+# > Sử dụng giao thức HTTPS thay vì HTTP. Chứng chỉ MitM CA phải được định cấu hình trước tiên. Bạn cần cài đặt chứng chỉ theo cách thủ công trên thiết bị khách.
 # http-api-tls =
-# > 启用此功能后，您可以通过 Web 浏览器控制 Surge。
+# > Khi tính năng này được bật, bạn có thể điều khiển Surge thông qua trình duyệt web của mình.
 http-api-web-dashboard = true
-# > 显示错误页面拒绝,如果请求是纯 HTTP 请求，则显示 REJECT 策略的错误网页。
+# > Hiển thị trang lỗi để từ chối hoặc trang lỗi của chính sách TỪ CHỐI nếu yêu cầu là yêu cầu HTTP thuần túy.
 show-error-page-for-reject = true
-# > Surge VIF只能处理 TCP 和 UDP 协议。使用此选项可绕过特定 IP 范围，以允许所有流量通过。
-# > 注意：此选项仅适用于Surge VIF。Surge Proxy Server 处理的请求不受影响。合并 skip-proxy 并确保 tun-excluded-routes 特定 HTTP 流量绕过 Surge。
+# > Surge VIF chỉ có thể xử lý các giao thức TCP và UDP. Sử dụng tùy chọn này để bỏ qua các dải IP cụ thể để cho phép tất cả lưu lượng truy cập.
+# > Lưu ý: Tùy chọn này chỉ khả dụng cho Surge VIF. Các yêu cầu do Surge Proxy Server xử lý sẽ không bị ảnh hưởng. Kết hợp proxy bỏ qua và đảm bảo lưu lượng truy cập HTTP cụ thể được loại trừ theo tuyến đường bỏ qua Surge.
 # tun-excluded-routes =
-# > 默认情况下，Surge VIF 接口将自身声明为默认路由。但是，由于 Wi-Fi 接口的路由较小，因此某些流量可能无法通过浪涌 VIF 接口。使用此选项可添加较小的路由。
+# > Theo mặc định, giao diện Surge VIF tự khai báo là tuyến mặc định. Tuy nhiên, do giao diện Wi-Fi định tuyến nhỏ hơn nên một số lưu lượng truy cập có thể không đi qua giao diện VIF đột biến. Sử dụng tùy chọn này để thêm các tuyến đường nhỏ hơn.
 # tun-included-routes =
-# > Internet 连接测试的 URL, 以及，DIRECT 策略的测试 URL
+# > Internet URL cho kiểm tra kết nối và URL kiểm tra cho chiến lược TRỰC TIẾP
 internet-test-url = http://223.6.6.6
-# > 代理策略的默认测试 URL
+# > URL kiểm tra mặc định cho chính sách proxy
 proxy-test-url = http://1.0.0.1/generate_204
-# > 连接测试超时（秒）
+# > Thời gian chờ kiểm tra kết nối (giây)
 test-timeout = 5
-# > 始终真实的 IP 此选项要求 Surge 在 Surge VIF 处理 DNS 问题时返回真实 IP 地址而不是虚假 IP 地址 DNS数据包将被转发到上游DNS服务器 此参数属于主机列表类型，详细规则请参见：https://manual.nssurge.com/others/host-list.html
-# > 使用前缀 - 排除主机名
-# > 支持通配符 * 和 ?
-# > 使用后缀 :port 匹配其他端口,如果未提供端口号，则 Surge 将自动为该参数附加标准端口号，就像 force-http-engine-hosts 参数一样，如果仅配置了主机名，则仅对端口 80 有效。对于 MITM 功能，它仅对端口 443 有效。
-# > 使用后缀 :0 以匹配所有端口
-# > 使用<ip-address> 直接使用 IPv4/IPv6 地址（而不是域）匹配所有主机名
+# > Luôn IP thật Tùy chọn này yêu cầu Surge trả về địa chỉ IP thực thay vì địa chỉ IP giả khi Surge VIF xử lý các sự cố DNS. Các gói DNS sẽ được chuyển tiếp đến máy chủ DNS ngược dòng. Tham số này thuộc về loại danh sách máy chủ. Để biết các quy tắc chi tiết, nhìn thấy：https://manual.nssurge.com/others/host-list.html
+# > Sử dụng tiền tố - loại trừ tên máy chủ
+# > Hỗ trợ các ký tự đại diện * và ?
+# > Sử dụng hậu tố:port để khớp với các cổng khác. Nếu không cung cấp số cổng, Surge sẽ tự động nối số cổng tiêu chuẩn vào tham số này, giống như tham số Force-http-engine-hosts. Nếu chỉ có tên máy chủ được định cấu hình thì chỉ có cổng 80 sẽ được sử dụng. Hiệu quả. Đối với chức năng MITM, nó chỉ hợp lệ với cổng 443.
+# > Sử dụng hậu tố :0 để khớp với tất cả các cổng
+# > Sử dụng <ip-address> để khớp trực tiếp tất cả tên máy chủ bằng địa chỉ IPv4/IPv6 (thay vì tên miền)
 # > -*icloud*, -*.mzstatic.com, -*.facebook.com, -*.instagram.com, -*.twitter.com, -*dropbox*, -*apple*, -*.amazonaws.com, -<ip-address>, *
 always-real-ip = *.test.com
-# > 劫持DNS,默认情况下，Surge 仅返回发送到 Surge DNS 地址 （198.18.0.2） 的 DNS 查询的虚假 IP 地址。发送到标准 DNS 的查询将被转发。某些设备或软件始终使用硬编码的 DNS 服务器。（例如，Google Speakers始终使用 8.8.8.8）。您可以使用此选项劫持查询以获取虚假地址。您可以使用 hijack-dns = *:53 劫持所有DNS查询
+# > Chiếm quyền điều khiển DNS. Theo mặc định, Surge chỉ trả về địa chỉ IP giả cho các truy vấn DNS được gửi đến địa chỉ DNS của Surge (198.18.0.2). Các truy vấn gửi đến DNS tiêu chuẩn sẽ được chuyển tiếp. Một số thiết bị hoặc phần mềm luôn sử dụng máy chủ DNS được mã hóa cứng. (Ví dụ: Google luôn sử dụng 8.8.8.8). Bạn có thể sử dụng tùy chọn này để chiếm đoạt các truy vấn nhằm lấy địa chỉ giả. Bạn có thể chiếm quyền điều khiển tất cả các truy vấn DNS bằng cách sử dụng hijack-dns = *:53
 hijack-dns = *:53
-# > 使 Surge 将 TCP 连接视为 HTTP 请求。Surge HTTP 引擎将处理请求，并且所有高级功能都将可用，例如捕获、重写和脚本编写。此参数属于主机列表类型，详细规则请参见：https://manual.nssurge.com/others/host-list.html
+# > Khiến Surge coi các kết nối TCP là yêu cầu HTTP. Công cụ Surge HTTP sẽ xử lý yêu cầu và tất cả các tính năng nâng cao sẽ có sẵn như thu thập, viết lại và viết tập lệnh. Tham số này thuộc loại danh sách máy chủ. Để biết quy tắc chi tiết, vui lòng xem:https://manual.nssurge.com/others/host-list.html
 # force-http-engine-hosts =
-# > 加密 DNS 跟随出站模式,默认情况下，加密的 DNS 查找使用直接出站。启用该选项将使 DOH 遵循出站模式设置和规则。
+# > DNS được mã hóa tuân theo chế độ gửi đi và theo mặc định, việc tra cứu DNS được mã hóa sử dụng gửi đi trực tiếp. Việc bật tùy chọn này sẽ khiến DOH tuân theo các quy tắc và cài đặt chế độ đi.
 # encrypted-dns-follow-outbound-mode = true
-# > 加密的 DNS 服务器,加密的 DNS 服务器的 URL。如果配置了加密 DNS，则传统 DNS 将仅用于测试连接并解析加密 DNS URL 中的域。
+# > Máy chủ DNS được mã hóa,URL của máy chủ DNS được mã hóa. Nếu DNS được mã hóa được định cấu hình, DNS truyền thống sẽ chỉ được sử dụng để kiểm tra kết nối và phân giải miền khỏi URL DNS được mã hóa.
 encrypted-dns-server = https://223.5.5.5/dns-query, https://1.12.12.12/dns-query, https://8.8.8.8/dns-query, https://1.1.1.1/dns-query
-# > 跳过加密的DNS服务器证书验证，这是不安全的。
+# > Bỏ qua xác minh chứng chỉ máy chủ DNS được mã hóa, điều này không an toàn.
 encrypted-dns-skip-cert-verification = false
-# > 使用本地主机代理,默认情况下，如果使用代理策略，则始终在远程服务器上执行 DNS 查找。启用此选项后，如果存在目标域的本地 DNS 映射结果，则 Surge 会使用 IP 地址而不是域来设置代理连接。
+# > Sử dụng proxy localhost, theo mặc định, việc tra cứu DNS luôn được thực hiện trên máy chủ từ xa nếu sử dụng chính sách proxy. Khi tùy chọn này được bật, Surge sử dụng địa chỉ IP thay vì tên miền để thiết lập kết nối proxy nếu tồn tại ánh xạ DNS cục bộ cho tên miền mục tiêu.
 use-local-host-item-for-proxy = true
-# > 要更新的 GeoIP 数据库的 URL
+# > URL của cơ sở dữ liệu GeoIP cần cập nhật
 geoip-maxmind-url = https://github.com/Hackl0us/GeoIP2-CN/raw/release/Country.mmdb
-# > 禁用 GeoIP 数据库的自动更新
+# > Tắt cập nhật tự động cơ sở dữ liệu GeoIP
 disable-geoip-db-auto-update = false
-# > iOS 系统可能会执行 SVCB 记录 DNS 查找，而不是标准 A 记录查找。这会导致 Surge 无法返回虚拟 IP 地址。因此，默认情况下，禁止 SVCB 记录查找，以强制系统执行 A 记录查找。
+# > Hệ thống iOS có thể thực hiện tra cứu DNS bản ghi SVCB thay vì tra cứu bản ghi A tiêu chuẩn. Điều này ngăn Surge trả lại địa chỉ IP ảo. Do đó, theo mặc định, tính năng tra cứu bản ghi SVCB bị tắt để buộc hệ thống thực hiện tra cứu bản ghi A.
 allow-dns-svcb = false
-# > UDP 流量与不支持 UDP 中继的策略匹配时的回退行为,可能的值： DIRECT 、 REJECT, 如果没有代理服务器支持 UDP 转发，可修改为「 direct 」或注释下条，但需注意同一目标主机名 TCP 请求与 UDP 请求的源地址不同所造成的隐私及安全风险。
+# > Hành vi dự phòng khi lưu lượng UDP khớp với chính sách không hỗ trợ chuyển tiếp UDP, các giá trị có thể có: DIRECT 、 REJECT, Nếu không có máy chủ proxy nào hỗ trợ chuyển tiếp UDP, nó có thể được sửa đổi thành「 direct 」Hoặc nhận xét về điểm tiếp theo, nhưng vui lòng chú ý đến các rủi ro về quyền riêng tư và bảo mật do các địa chỉ nguồn khác nhau của yêu cầu TCP và yêu cầu UDP có cùng tên máy chủ đích gây ra.
 udp-policy-not-supported-behaviour = REJECT
-# > 代理的默认 UDP 测试参数, 例如： apple.com@8.8.8.8
+# > Các tham số kiểm tra UDP mặc định cho proxy, ví dụ: apple.com@8.8.8.8
 # proxy-test-udp = apple.com@8.8.8.8
-# > 当系统负载非常高且数据包处理延迟时，启用将优先处理 UDP 数据包。也称为游戏模式
+# > Bật sẽ ưu tiên các gói UDP khi tải hệ thống rất cao và quá trình xử lý gói bị trì hoãn. Còn được gọi là chế độ trò chơi
 udp-priority = false
-# > Surge 将自动嗅探发送到端口 80 和 443 的 TCP 请求的协议，从而在优化性能的同时启用高级 HTTP/HTTPS 功能。但是，这可能会导致一些兼容性问题。如果遇到问题，可以在此处添加主机名，Surge 不会嗅探这些请求的协议。此参数属于主机列表类型，详细规则请参见：https://manual.nssurge.com/others/host-list.html
+# > Surge sẽ tự động đánh hơi giao thức của các yêu cầu TCP được gửi tới cổng 80 và 443, kích hoạt các tính năng HTTP/HTTPS nâng cao đồng thời tối ưu hóa hiệu suất. Tuy nhiên, điều này có thể gây ra một số vấn đề tương thích. Nếu gặp sự cố, bạn có thể thêm tên máy chủ tại đây và Surge sẽ không đánh hơi giao thức cho những yêu cầu này. Tham số này thuộc loại danh sách máy chủ. Để biết quy tắc chi tiết, vui lòng xem:https://manual.nssurge.com/others/host-list.html
 always-raw-tcp-hosts = *.baidu.com
-# ================ 仅限 iOS 的 Surge 参数 ================ #
-# > 允许 wifi 访问,允许 Surge 代理服务从 LAN 中的其他设备访问。
+# ================ Thông số Surge chỉ dành cho iOS ================ #
+# > Cho phép truy cập wifi, cho phép truy cập dịch vụ proxy Surge từ các thiết bị khác trong mạng LAN.
 # allow-wifi-access = false
-# > Surge HTTP 代理服务的端口号
+# > Số cổng của dịch vụ proxy Surge HTTP
 # wifi-access-http-port = 6152
-# > Surge SOCKS5 代理服务的端口号
+# > Surge SOCKS5 Số cổng của dịch vụ proxy
 # wifi-access-socks5-port = 6153
-# > 要求对 Surge HTTP 代理服务进行身份验证。例如：用户名：密码
+# > Yêu cầu xác thực với dịch vụ proxy Surge HTTP. Ví dụ: tên người dùng: mật khẩu
 # wifi-access-http-auth = surge:mima1234
-# > 启用 Wi-Fi 助手 (在 Wi-Fi 网络不佳时尝试使用数据网络建立连接，请仅当使用不限量的数据流量时开启)
+# > Bật Wi-Fi Assistant (cố gắng sử dụng mạng dữ liệu để thiết lập kết nối khi mạng Wi-Fi kém, vui lòng chỉ bật khi sử dụng dữ liệu không giới hạn)
 # wifi-assist = false
-# > 隐藏状态栏中的 VPN 图标
+# > Ẩn biểu tượng VPN trên thanh trạng thái
 # hide-vpn-icon = false
-# > 当 Wi-Fi 网络较差时，不要设置与蜂窝数据的连接，而是始终同时设置与 Wi-Fi 和蜂窝数据的连接 此选项可以在 Wi-Fi 较差或 Wi-Fi 网络切换时显著改善网络体验 此功能将应用于所有 TCP 连接和 DNS 查找。仅当您拥有无限的蜂窝数据计划时才启用它
+# > Thay vì thiết lập kết nối với dữ liệu di động khi mạng Wi-Fi kém, hãy luôn thiết lập đồng thời kết nối với Wi-Fi và dữ liệu di động. Tùy chọn này có thể cải thiện đáng kể mạng khi Wi-Fi kém hoặc khi Wi-Fi chuyển đổi mạng. Trải nghiệm rằng tính năng này sẽ được áp dụng cho tất cả các kết nối TCP và tra cứu DNS. Chỉ kích hoạt nó nếu bạn có gói dữ liệu di động không giới hạn
 # all-hybrid = false
-# > 允许在“个人热点”打开时从其他设备访问 Surge 代理服务
+# > Cho phép truy cập vào dịch vụ proxy Surge từ các thiết bị khác khi Điểm truy cập cá nhân đang bật
 # allow-hotspot-access = ture
-# > 包含所有网络,默认情况下，某些请求可能不会被 Surge 接管。例如，应用程序可以绑定到物理网络接口以绕过浪涌 VIF。启用“包括所有网络”选项，以确保所有请求都由 Surge 处理而不会泄漏。当您使用 Surge 作为防火墙时，此选项很有用。（需要 iOS 14.0 或以上版本）,启用此选项可能会导致 AirDrop 和 Xcode 调试问题、通过 USB 的 Surge Dashboard 无法正常工作以及其他意外的副作用。请谨慎使用。
+# > Tất cả các mạng đều được bao gồm và một số yêu cầu có thể không được Surge tiếp quản theo mặc định. Ví dụ: các ứng dụng có thể liên kết với các giao diện mạng vật lý để vượt qua các VIF đột biến. Bật tùy chọn "Bao gồm tất cả các mạng" để đảm bảo tất cả các yêu cầu được Surge xử lý mà không bị rò rỉ. Tùy chọn này hữu ích khi bạn sử dụng Surge làm tường lửa. (Yêu cầu iOS 14.0 trở lên), Việc bật tùy chọn này có thể gây ra sự cố gỡ lỗi AirDrop và Xcode, Bảng điều khiển tăng tốc qua USB không hoạt động bình thường và các tác dụng phụ không mong muốn khác. Vui lòng sử dụng một cách thận trọng.
 # include-all-networks = false
-# > 包含本地网络,启用此选项可使 Surge VIF 处理发送到 LAN 的请求。（需要 iOS 14.2 或更高版本）启用此选项可能会导致 AirDrop 和 Xcode 调试问题、通过 USB 的 Surge Dashboard 无法正常工作以及其他意外的副作用。请谨慎使用。必须与 include-all-networks=true 结合使用。
+# > Bao gồm mạng cục bộ, việc bật tùy chọn này sẽ khiến Surge VIF xử lý các yêu cầu được gửi tới mạng LAN. (Yêu cầu iOS 14.2 trở lên) Việc bật tùy chọn này có thể gây ra sự cố gỡ lỗi AirDrop và Xcode, Bảng điều khiển tăng tốc qua USB không hoạt động bình thường và các tác dụng phụ không mong muốn khác. Vui lòng sử dụng một cách thận trọng. Phải được sử dụng cùng với include-all-networks=true.
 # include-local-networks = false
-# > 启用此选项可使 Surge VIF 处理 Apple 推送通知服务 （APNs） 的网络流量。必须与 include-all-networks=true 结合使用。
+# > Việc bật tùy chọn này cho phép Surge VIF xử lý lưu lượng truy cập mạng cho Dịch vụ thông báo đẩy của Apple (APN). Phải được sử dụng cùng với include-all-networks=true.
 # include-apns = false
-# > 启用此选项可使 Surge VIF 处理蜂窝服务的 Internet 可路由网络流量。（VoLTE、Wi-Fi 通话、IMS、彩信、可视语音信箱等）.请注意，某些蜂窝运营商会绕过互联网，将蜂窝网络服务流量直接路由到运营商网络。此类蜂窝服务流量始终被排除在隧道之外。必须与 include-all-networks=true 结合使用。
+# > Việc bật tùy chọn này cho phép Surge VIF xử lý lưu lượng truy cập mạng có thể định tuyến trên Internet cho các dịch vụ di động. (VoLTE, Gọi qua Wi-Fi, IMS, MMS, Thư thoại kèm theo hình ảnh, v.v.). Xin lưu ý rằng một số nhà cung cấp dịch vụ di động bỏ qua Internet và định tuyến lưu lượng dịch vụ di động trực tiếp đến mạng của nhà cung cấp dịch vụ di động. Lưu lượng dịch vụ di động như vậy luôn bị loại trừ khỏi đường hầm. Phải được sử dụng cùng với include-all-networks=true.
 # include-cellular-services = false
-# > 兼容性模式,此选项用于控制 Surge iOS 的工作模式。
-# > 0：自动，在 5.8.0 之前的 Surge iOS 版本中，这相当于 1，从 5.8.0 开始，它相当于 3
-# > 1：代理接管 + VIF，在此模式下，代理接管的优先级高于 VIF 接管，提供最佳性能，但某些应用程序可能会检查代理设置并拒绝工作。
-# > 2：仅代理接管
-# > 3：VIF Takeover Only：最新版本的默认工作模式。
-# > 4：代理接管 + VIF，但代理使用 VIF 地址而不是环回地址。
-# > 5：代理接管+VIF，但VIF路由使用多个较小的路由进行接管，没有配置默认路由，可以用来绕过一些特殊问题。（例如，HomeKit 安防摄像头）
+# > Chế độ tương thích, tùy chọn này được sử dụng để kiểm soát chế độ làm việc của Surge iOS.
+# > 0：Tự động, trong các phiên bản Surge iOS trước 5.8.0, giá trị này tương đương với 1, bắt đầu từ 5.8.0, nó tương đương với 3
+# > 1：Tiếp quản proxy + VIF, ở chế độ này, tiếp quản proxy được ưu tiên hơn tiếp quản VIF, mang lại hiệu suất tốt nhất nhưng một số ứng dụng có thể kiểm tra cài đặt proxy và từ chối hoạt động.
+# > 2：Chỉ tiếp quản đại lý
+# > 3：VIF Takeover Only：Chế độ làm việc mặc định của phiên bản mới nhất.
+# > 4：Proxy tiếp quản + VIF, nhưng proxy sử dụng địa chỉ VIF thay vì địa chỉ loopback.
+# > 5：Proxy tiếp quản + VIF, nhưng định tuyến VIF sử dụng nhiều tuyến nhỏ hơn để tiếp quản. Không có tuyến mặc định nào được định cấu hình, có thể được sử dụng để vượt qua một số vấn đề đặc biệt. (ví dụ: camera an ninh HomeKit)
 # compatibility-mode = 0
-# ================ 仅限 MacOS 的 Surge 参数 ================ #
-# > 如果禁用，即使 Wi-Fi 不是主网络接口，SSID/BSSID 模式仍可匹配。
+# ================ Tăng thông số chỉ dành cho MacOS ================ #
+# > Nếu bị tắt, các mẫu SSID/BSSID sẽ vẫn khớp ngay cả khi Wi-Fi không phải là giao diện mạng chính.
 use-default-policy-if-wifi-not-primary = false
-# > 遵循 /etc/hosts 中的本地 DNS 映射项
+# > Theo dõi các mục ánh xạ DNS cục bộ trong /etc/hosts
 read-etc-hosts = true
-# > Surge HTTP 代理服务的端口号
+# > Số cổng của dịch vụ proxy Surge HTTP
 http-listen = 0.0.0.0
-# > Surge SOCKS5 代理服务的端口号
+# > Surge SOCKS5 Số cổng của dịch vụ proxy
 socks5-listen = 0.0.0.0
-# > 启用 CPU 调试模式。这可能会降低性能。
+# > Kích hoạt chế độ gỡ lỗi CPU. Điều này có thể làm giảm hiệu suất.
 debug-cpu-usage = false
-# > 启用内存调试模式。这可能会降低性能。
+# > Bật chế độ gỡ lỗi bộ nhớ. Điều này có thể làm giảm hiệu suất.
 debug-memory-usage = false
-# > vif模式
-# > auto ：让Surge自动选择最合适的工作模式。
-# > v1 ：传统模式，TCP协议栈完全由Surge管理。由于 Surge 运行在用户空间中，这意味着每个数据包都需要从内核空间传输到用户空间进行处理。
-# > v2 ：在 5.0 版本中引入，它使用 macOS 中的数据包过滤器机制，利用 macOS 的 TCP 协议栈，从而避免了在内核空间和用户空间之间切换的开销，从而显着提高了性能。但是，由于它需要修改 pf 设置，因此它与虚拟机网络和网络共享功能不兼容。
-# > v3 ：在 5.2 版中引入，它绕过了数据包过滤器，并采用另一种技术来使用 macOS 的 TCP 协议栈。性能略低于 v2，但避免了因调整 pf 设置而导致的兼容性问题。
+# > vif người mẫu
+# > auto ：Để Surge tự động lựa chọn chế độ làm việc phù hợp nhất.
+# > v1 ：Ở chế độ truyền thống, ngăn xếp giao thức TCP được quản lý hoàn toàn bởi Surge. Vì Surge chạy trong không gian người dùng, điều này có nghĩa là mọi gói cần được chuyển từ không gian kernel sang không gian người dùng để xử lý.
+# > v2 ：Được giới thiệu trong phiên bản 5.0, nó sử dụng cơ chế lọc gói trong macOS để tận dụng ngăn xếp giao thức TCP của macOS, nhờ đó tránh được chi phí chuyển đổi giữa không gian kernel và không gian người dùng, từ đó cải thiện đáng kể hiệu suất. Tuy nhiên, vì nó yêu cầu sửa đổi cài đặt pf nên nó không tương thích với các tính năng chia sẻ mạng và mạng máy ảo.
+# > v3 ：Được giới thiệu trong phiên bản 5.2, nó bỏ qua các bộ lọc gói và sử dụng một kỹ thuật khác để sử dụng ngăn xếp TCP của macOS. Hiệu suất thấp hơn một chút so với v2, nhưng tránh được các vấn đề tương thích do điều chỉnh cài đặt pf.
 vif-mode = v3
 
 [Replica]
@@ -534,130 +534,132 @@ keyword-filter=(null)
 {% if request.target == "surge-ios" %}
 
 [General]
-# ================ iOS和MacOS共同的 Surge 参数 ================ #
-# > 日志级别 verbose, info, notify, or warning 不建议在日常使用中启用详细，因为这会显著降低性能。
+# ================ Thông số xung phổ biến cho iOS và MacOS ================ #
+# > Mức đăng nhập verbose, info, notify, or warning Việc kích hoạt dài dòng không được khuyến khích sử dụng hàng ngày vì nó có thể làm giảm đáng kể hiệu suất.
 loglevel = notify
-# > IPv6协议 启用完整的 IPv6 支持。具体来说，开启该选项后，访问域名时会查询该域名的AAAA记录。即使未启用此选项，也可以通过直接访问 IPv6 地址来访问 IPv6 站点。
+# > Giao thức IPv6 Cho phép hỗ trợ IPv6 đầy đủ. Cụ thể, sau khi bật tùy chọn này, bản ghi AAAA của tên miền sẽ được truy vấn khi truy cập vào tên miền. Ngay cả khi tùy chọn này không được bật, các trang web IPv6 vẫn có thể được truy cập bằng cách truy cập trực tiếp vào địa chỉ IPv6.
 ipv6 = false
-# > 允许 IPv6 通过 Surge VIF。当您希望 Surge 处理连接到 IPv6 地址的原始 TCP 连接时很有用。
-# > off ：切勿使用 IPv6 设置 Surge VIF
-# > auto ：仅当本地网络具有有效的 IPv6 网络时，才使用 IPv6 设置 Surge VIF
-# > always ：始终使用 IPv6 设置 Surge VIF
+# > Cho phép IPv6 thông qua Surge VIF. Hữu ích khi bạn muốn Surge xử lý các kết nối TCP thô tới địa chỉ IPv6.
+# > off ：Không bao giờ sử dụng IPv6 để thiết lập Surge VIF
+# > auto ：Chỉ thiết lập Surge VIF với IPv6 nếu mạng cục bộ có mạng IPv6 hợp lệ
+# > always ：Luôn thiết lập Surge VIF với IPv6
 ipv6-vif = false
-# > dns服务器 上游DNS服务器的IP地址
+# > địa chỉ IP máy chủ dns của máy chủ DNS ngược tuyến
 # dns-server = system, 223.5.5.5, 119.29.29.29, 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 9.9.9.9:995
 # doh-server = https://223.5.5.5/dns-query, https://1.12.12.12/dns-query, https://8.8.8.8/dns-query, https://1.1.1.1/dns-query
-# > 跳过代理 在 iOS 版本中，此选项强制与这些域/IP 范围的连接由 Surge VIF 而不是 Surge 代理处理。在 macOS 版本中，当启用“设置为系统代理”时，这些设置将应用于系统。此选项用于修复某些应用的兼容性问题。
+# > Bỏ qua proxy Trong phiên bản iOS, tùy chọn này buộc các kết nối đến các miền/dải IP này phải được xử lý bởi Surge VIF thay vì proxy Surge. Trong các phiên bản macOS, khi bật Set as System Proxy, các cài đặt này sẽ được áp dụng cho hệ thống. Tùy chọn này được sử dụng để khắc phục sự cố tương thích với một số ứng dụng.
 # > apple.com、*apple.com、192.168.2.* or 192.168.2.0/24
-# > 注意：如果输入 IP 地址或地址范围，则只有在使用该地址连接到该主机时才能绕过代理，而不能在通过解析为该地址的域名连接到主机时绕过代理。
+# > Lưu ý: Nếu bạn nhập địa chỉ IP hoặc dải địa chỉ, proxy sẽ chỉ bị bỏ qua khi kết nối với máy chủ đó bằng địa chỉ đó chứ không phải khi kết nối với máy chủ qua tên miền phân giải theo địa chỉ đó.
 skip-proxy = localhost, *.local, 0.0.0.0/8, 10.0.0.0/8, 17.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 172.17.0.0/12, 172.18.0.0/12, 172.19.0.0/12, 172.20.0.0/24, 192.0.0.0/24, 192.0.2.0/24, 192.168.0.0/16, 192.88.99.0/24, 198.18.0.0/15, 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 240.0.0.0/4, 255.255.255.255/32, 117.71.53.199/32, 47.75.120.166/32
-# > 排除简单主机名 就像 skip-proxy 参数一样。此选项允许请求使用由 Surge VIF 而不是 Surge 代理处理的简单主机名（不带点）。
+# > Loại trừ các tên máy chủ đơn giản giống như tham số Skip-proxy. Tùy chọn này cho phép các yêu cầu sử dụng tên máy chủ đơn giản (không có dấu chấm) được xử lý bởi Surge VIF thay vì tác nhân Surge.
 # > mysql01、redis01
 exclude-simple-hostnames = true
-# > 外部控制器访问 此选项允许外部控制器控制 Surge，例如 Surge Dashboard （macOS） 和 Surge iOS 遥控器 （iOS）。例如：key@0.0.0.0:6166
+# > Truy cập bộ điều khiển bên ngoài Tùy chọn này cho phép bộ điều khiển bên ngoài điều khiển Surge, chẳng hạn như Bảng điều khiển Surge (macOS) và Điều khiển từ xa Surge iOS (iOS). Ví dụ: key@0.0.0.0:6166
 external-controller-access = mima1234@0.0.0.0:6166
-# > 使用 HTTPS 协议而不是 HTTP。必须先配置 MitM CA 证书。您需要在客户端设备上手动安装证书。
+# > Sử dụng giao thức HTTPS thay vì HTTP. Chứng chỉ MitM CA phải được định cấu hình trước tiên. Bạn cần cài đặt chứng chỉ theo cách thủ công trên thiết bị khách.
 # http-api-tls =
-# > 启用此功能后，您可以通过 Web 浏览器控制 Surge。
+# > Khi tính năng này được bật, bạn có thể điều khiển Surge thông qua trình duyệt web của mình.
 http-api-web-dashboard = false
-# > 显示错误页面拒绝,如果请求是纯 HTTP 请求，则显示 REJECT 策略的错误网页。
+# > Hiển thị trang lỗi bị từ chối nếu yêu cầu thuần túy HTTP yêu cầu, nó sẽ được hiển thị REJECT Trang lỗi chính sách.
 show-error-page-for-reject = true
-# > Surge VIF只能处理 TCP 和 UDP 协议。使用此选项可绕过特定 IP 范围，以允许所有流量通过。
-# > 注意：此选项仅适用于Surge VIF。Surge Proxy Server 处理的请求不受影响。合并 skip-proxy 并确保 tun-excluded-routes 特定 HTTP 流量绕过 Surge。
+# > Surge VIF chỉ có thể xử lý các giao thức TCP và UDP. Sử dụng tùy chọn này để bỏ qua các dải IP cụ thể để cho phép tất cả lưu lượng truy cập.
+# > Lưu ý: Tùy chọn này chỉ khả dụng cho Surge VIF. Các yêu cầu do Surge Proxy Server xử lý sẽ không bị ảnh hưởng. Kết hợp proxy bỏ qua và đảm bảo lưu lượng truy cập HTTP cụ thể được loại trừ theo tuyến đường bỏ qua Surge.
 # tun-excluded-routes =
-# > 默认情况下，Surge VIF 接口将自身声明为默认路由。但是，由于 Wi-Fi 接口的路由较小，因此某些流量可能无法通过浪涌 VIF 接口。使用此选项可添加较小的路由。
+# > Theo mặc định, giao diện Surge VIF tự khai báo là tuyến mặc định. Tuy nhiên, do giao diện Wi-Fi định tuyến nhỏ hơn nên một số lưu lượng truy cập có thể không đi qua giao diện VIF đột biến. Sử dụng tùy chọn này để thêm các tuyến đường nhỏ hơn.
 # tun-included-routes =
-# > Internet 连接测试的 URL, 以及，DIRECT 策略的测试 URL
+# > Internet URL cho kiểm tra kết nối và URL kiểm tra cho chiến lược TRỰC TIẾP
 internet-test-url = http://223.6.6.6
 # > 代理策略的默认测试 URL
 proxy-test-url = http://1.0.0.1/generate_204
-# > 连接测试超时（秒）
+# > Thời gian chờ kiểm tra kết nối (giây)
 test-timeout = 5
-# > 始终真实的 IP 此选项要求 Surge 在 Surge VIF 处理 DNS 问题时返回真实 IP 地址而不是虚假 IP 地址 DNS数据包将被转发到上游DNS服务器 此参数属于主机列表类型，详细规则请参见：https://manual.nssurge.com/others/host-list.html
-# > 使用前缀 - 排除主机名
-# > 支持通配符 * 和 ?
-# > 使用后缀 :port 匹配其他端口,如果未提供端口号，则 Surge 将自动为该参数附加标准端口号，就像 force-http-engine-hosts 参数一样，如果仅配置了主机名，则仅对端口 80 有效。对于 MITM 功能，它仅对端口 443 有效。
-# > 使用后缀 :0 以匹配所有端口
-# > 使用<ip-address> 直接使用 IPv4/IPv6 地址（而不是域）匹配所有主机名
+# >Luôn IP thật Tùy chọn này yêu cầu Surge trả về địa chỉ IP thực thay vì địa chỉ IP giả khi Surge VIF xử lý các sự cố DNS. Các gói DNS sẽ được chuyển tiếp đến máy chủ DNS ngược dòng. Tham số này thuộc về loại danh sách máy chủ. Để biết các quy tắc chi tiết, nhìn thấy:https://manual.nssurge.com/others/host-list.html
+# > Sử dụng tiền tố - loại trừ tên máy chủ
+# > Hỗ trợ các ký tự đại diện * và ?
+# > Sử dụng hậu tố:port để khớp với các cổng khác. Nếu không cung cấp số cổng, Surge sẽ tự động nối số cổng tiêu chuẩn vào tham số này, giống như tham số Force-http-engine-hosts. Nếu chỉ có tên máy chủ được định cấu hình thì chỉ có cổng 80 sẽ được sử dụng. Hiệu quả. Đối với chức năng MITM, nó chỉ hợp lệ với cổng 443.
+# > Sử dụng hậu tố :0 để khớp với tất cả các cổng
+# > Sử dụng <ip-address> để khớp trực tiếp tất cả tên máy chủ bằng địa chỉ IPv4/IPv6 (thay vì tên miền)
 # > -*icloud*, -*.mzstatic.com, -*.facebook.com, -*.instagram.com, -*.twitter.com, -*dropbox*, -*apple*, -*.amazonaws.com, -<ip-address>, *
 always-real-ip = *.test.com
-# > 劫持DNS,默认情况下，Surge 仅返回发送到 Surge DNS 地址 （198.18.0.2） 的 DNS 查询的虚假 IP 地址。发送到标准 DNS 的查询将被转发。某些设备或软件始终使用硬编码的 DNS 服务器。（例如，Google Speakers始终使用 8.8.8.8）。您可以使用此选项劫持查询以获取虚假地址。您可以使用 hijack-dns = *:53 劫持所有DNS查询
+# > Chiếm quyền điều khiển DNS. Theo mặc định, Surge chỉ trả về địa chỉ IP giả cho các truy vấn DNS được gửi đến địa chỉ DNS của Surge (198.18.0.2). Các truy vấn gửi đến DNS tiêu chuẩn sẽ được chuyển tiếp. Một số thiết bị hoặc phần mềm luôn sử dụng máy chủ DNS được mã hóa cứng. (Ví dụ: Google luôn sử dụng 8.8.8.8). Bạn có thể sử dụng tùy chọn này để chiếm đoạt các truy vấn nhằm lấy địa chỉ giả. Bạn có thể chiếm quyền điều khiển tất cả các truy vấn DNS bằng cách sử dụng hijack-dns = *:53
 hijack-dns = *:53
-# > 使 Surge 将 TCP 连接视为 HTTP 请求。Surge HTTP 引擎将处理请求，并且所有高级功能都将可用，例如捕获、重写和脚本编写。此参数属于主机列表类型，详细规则请参见：https://manual.nssurge.com/others/host-list.html
+# > Khiến Surge coi các kết nối TCP là yêu cầu HTTP. Công cụ Surge HTTP sẽ xử lý yêu cầu và tất cả các tính năng nâng cao sẽ có sẵn như thu thập, viết lại và viết tập lệnh. Tham số này thuộc loại danh sách máy chủ. Để biết quy tắc chi tiết, vui lòng xem:https://manual.nssurge.com/others/host-list.html
 # force-http-engine-hosts =
-# > 加密 DNS 跟随出站模式,默认情况下，加密的 DNS 查找使用直接出站。启用该选项将使 DOH 遵循出站模式设置和规则。
+# > DNS được mã hóa tuân theo chế độ gửi đi và theo mặc định, việc tra cứu DNS được mã hóa sử dụng gửi đi trực tiếp. Việc bật tùy chọn này sẽ khiến DOH tuân theo các quy tắc và cài đặt chế độ đi.
 # encrypted-dns-follow-outbound-mode = true
-# > 加密的 DNS 服务器,加密的 DNS 服务器的 URL。如果配置了加密 DNS，则传统 DNS 将仅用于测试连接并解析加密 DNS URL 中的域。
+# > Máy chủ DNS được mã hóa,URL của máy chủ DNS được mã hóa. Nếu DNS được mã hóa được định cấu hình, DNS truyền thống sẽ chỉ được sử dụng để kiểm tra kết nối và phân giải miền khỏi URL DNS được mã hóa.
 encrypted-dns-server = https://223.5.5.5/dns-query, https://1.12.12.12/dns-query, https://8.8.8.8/dns-query, https://1.1.1.1/dns-query
-# > 跳过加密的DNS服务器证书验证，这是不安全的。
+# > Bỏ qua xác minh chứng chỉ máy chủ DNS được mã hóa, điều này không an toàn.
 encrypted-dns-skip-cert-verification = false
-# > 使用本地主机代理,默认情况下，如果使用代理策略，则始终在远程服务器上执行 DNS 查找。启用此选项后，如果存在目标域的本地 DNS 映射结果，则 Surge 会使用 IP 地址而不是域来设置代理连接。
+# > Sử dụng proxy localhost, theo mặc định, việc tra cứu DNS luôn được thực hiện trên máy chủ từ xa nếu sử dụng chính sách proxy. Khi tùy chọn này được bật, Surge sử dụng địa chỉ IP thay vì tên miền để thiết lập kết nối proxy nếu tồn tại ánh xạ DNS cục bộ cho tên miền mục tiêu.
 use-local-host-item-for-proxy = true
-# > 要更新的 GeoIP 数据库的 URL
+# > URL của cơ sở dữ liệu GeoIP cần cập nhật
 geoip-maxmind-url = https://github.com/Hackl0us/GeoIP2-CN/raw/release/Country.mmdb
-# > 禁用 GeoIP 数据库的自动更新
+# > Tắt cập nhật tự động cơ sở dữ liệu GeoIP
 disable-geoip-db-auto-update = false
-# > iOS 系统可能会执行 SVCB 记录 DNS 查找，而不是标准 A 记录查找。这会导致 Surge 无法返回虚拟 IP 地址。因此，默认情况下，禁止 SVCB 记录查找，以强制系统执行 A 记录查找。
+# > Hệ thống iOS có thể thực hiện tra cứu DNS bản ghi SVCB thay vì tra cứu bản ghi A tiêu chuẩn. Điều này ngăn Surge trả lại địa chỉ IP ảo. Do đó, theo mặc định, tính năng tra cứu bản ghi SVCB bị tắt để buộc hệ thống thực hiện tra cứu bản ghi A.
 allow-dns-svcb = false
-# > UDP 流量与不支持 UDP 中继的策略匹配时的回退行为,可能的值： DIRECT 、 REJECT, 如果没有代理服务器支持 UDP 转发，可修改为「 direct 」或注释下条，但需注意同一目标主机名 TCP 请求与 UDP 请求的源地址不同所造成的隐私及安全风险。
+# > Hành vi dự phòng khi lưu lượng UDP khớp với chính sách không hỗ trợ chuyển tiếp UDP, các giá trị có thể có: DIRECT 、 REJECT, Nếu không có máy chủ proxy nào hỗ trợ chuyển tiếp UDP, nó có thể được sửa đổi thành「 direct 」Hoặc nhận xét về điểm tiếp theo, nhưng vui lòng chú ý đến các rủi ro về quyền riêng tư và bảo mật do các địa chỉ nguồn khác nhau của yêu cầu TCP và yêu cầu UDP có cùng tên máy chủ đích gây ra.
 udp-policy-not-supported-behaviour = REJECT
-# > 代理的默认 UDP 测试参数, 例如： apple.com@8.8.8.8
+# > Các tham số kiểm tra UDP mặc định cho proxy, ví dụ: apple.com@8.8.8.8
 # proxy-test-udp = apple.com@8.8.8.8
-# > 当系统负载非常高且数据包处理延迟时，启用将优先处理 UDP 数据包。也称为游戏模式
+# > Bật sẽ ưu tiên các gói UDP khi tải hệ thống rất cao và quá trình xử lý gói bị trì hoãn. Còn được gọi là chế độ trò chơi
 udp-priority = false
-# > Surge 将自动嗅探发送到端口 80 和 443 的 TCP 请求的协议，从而在优化性能的同时启用高级 HTTP/HTTPS 功能。但是，这可能会导致一些兼容性问题。如果遇到问题，可以在此处添加主机名，Surge 不会嗅探这些请求的协议。此参数属于主机列表类型，详细规则请参见：https://manual.nssurge.com/others/host-list.html
+# > Surge sẽ tự động đánh hơi giao thức của các yêu cầu TCP được gửi tới cổng 80 và 443, kích hoạt các tính năng HTTP/HTTPS nâng cao đồng thời tối ưu hóa hiệu suất. Tuy nhiên, điều này có thể gây ra một số vấn đề tương thích. Nếu gặp sự cố, bạn có thể thêm tên máy chủ tại đây và Surge sẽ không đánh hơi giao thức cho những yêu cầu này. Tham số này thuộc loại danh sách máy chủ. Để biết quy tắc chi tiết, vui lòng xem:https://manual.nssurge.com/others/host-list.html
 always-raw-tcp-hosts = *.baidu.com
-# ================ 仅限 iOS 的 Surge 参数 ================ #
-# > 允许 wifi 访问,允许 Surge 代理服务从 LAN 中的其他设备访问。
+# ================ Thông số Surge chỉ dành cho iOS ================ #
+# > Cho phép truy cập wifi, cho phép truy cập dịch vụ proxy Surge từ các thiết bị khác trong mạng LAN.
 allow-wifi-access = false
-# > Surge HTTP 代理服务的端口号
+# > Surge HTTP Số cổng của dịch vụ proxy
 wifi-access-http-port = 6152
-# > Surge SOCKS5 代理服务的端口号
+# > Surge SOCKS5 Số cổng của dịch vụ proxy
 wifi-access-socks5-port = 6153
-# > 要求对 Surge HTTP 代理服务进行身份验证。例如：用户名：密码
+# > Yêu cầu xác thực với dịch vụ proxy Surge HTTP. Ví dụ: tên người dùng: mật khẩu
 wifi-access-http-auth = surge:mima1234
-# > 启用 Wi-Fi 助手 (在 Wi-Fi 网络不佳时尝试使用数据网络建立连接，请仅当使用不限量的数据流量时开启)
+# > Bật Wi-Fi Assistant (cố gắng sử dụng mạng dữ liệu để thiết lập kết nối khi mạng Wi-Fi kém, vui lòng chỉ bật khi sử dụng dữ liệu không giới hạn)
 wifi-assist = false
-# > 隐藏状态栏中的 VPN 图标
+# > Ẩn biểu tượng VPN trên thanh trạng thái
 hide-vpn-icon = false
-# > 当 Wi-Fi 网络较差时，不要设置与蜂窝数据的连接，而是始终同时设置与 Wi-Fi 和蜂窝数据的连接 此选项可以在 Wi-Fi 较差或 Wi-Fi 网络切换时显著改善网络体验 此功能将应用于所有 TCP 连接和 DNS 查找。仅当您拥有无限的蜂窝数据计划时才启用它
+# > Thay vì thiết lập kết nối với dữ liệu di động khi mạng Wi-Fi kém, hãy luôn thiết lập đồng thời kết nối với Wi-Fi và dữ liệu di động. Tùy chọn này có thể cải thiện đáng kể mạng khi Wi-Fi kém hoặc khi Wi-Fi chuyển đổi mạng. Trải nghiệm rằng tính năng này sẽ được áp dụng cho tất cả các kết nối TCP và tra cứu DNS. Chỉ kích hoạt nó nếu bạn có gói dữ liệu di động không giới hạn
 all-hybrid = false
-# > 允许在“个人热点”打开时从其他设备访问 Surge 代理服务
+# > Cho phép truy cập vào dịch vụ proxy Surge từ các thiết bị khác khi Điểm truy cập cá nhân đang bật
 allow-hotspot-access = ture
-# > 包含所有网络,默认情况下，某些请求可能不会被 Surge 接管。例如，应用程序可以绑定到物理网络接口以绕过浪涌 VIF。启用“包括所有网络”选项，以确保所有请求都由 Surge 处理而不会泄漏。当您使用 Surge 作为防火墙时，此选项很有用。（需要 iOS 14.0 或以上版本）,启用此选项可能会导致 AirDrop 和 Xcode 调试问题、通过 USB 的 Surge Dashboard 无法正常工作以及其他意外的副作用。请谨慎使用。
+# > Tất cả các mạng đều được bao gồm và một số yêu cầu có thể không được Surge tiếp quản theo mặc định. Ví dụ: các ứng dụng có thể liên kết với các giao diện mạng vật lý để vượt qua các VIF đột biến. Bật tùy chọn "Bao gồm tất cả các mạng" để đảm bảo tất cả các yêu cầu được Surge xử lý mà không bị rò rỉ. Tùy chọn này hữu ích khi bạn sử dụng Surge làm tường lửa. (Yêu cầu iOS 14.0 trở lên), Việc bật tùy chọn này có thể gây ra sự cố gỡ lỗi AirDrop và Xcode, Bảng điều khiểTất cả các mạng đều được bao gồm và một số yêu cầu có thể không được Surge tiếp quản theo mặc định. Ví dụ: các ứng dụng có thể liên kết với các giao diện mạng vật lý để vượt qua các VIF đột biến. Bật tùy chọn "Bao gồm tất cả các mạng" để đảm bảo tất cả các yêu cầu được Surge xử lý mà không bị rò rỉ. Tùy chọn này hữu ích khi bạn sử dụng Surge làm tường lửa. (Yêu cầu iOS 14.0 trở lên), Việc bật tùy chọn này có thể gây ra sự cố gỡ lỗi AirDrop và Xcode, Bảng điều khiển tăng tốc qua USB không hoạt động bình thường và các tác dụng phụ không mong muốn khác. Vui lòng sử dụng một cách thận trọng.n tăng tốc qua USB không hoạt động bình thường và các tác dụng phụ không mong muốn khác. Vui lòng sử dụng một cách thận trọng.
 include-all-networks = false
-# > 包含本地网络,启用此选项可使 Surge VIF 处理发送到 LAN 的请求。（需要 iOS 14.2 或更高版本）启用此选项可能会导致 AirDrop 和 Xcode 调试问题、通过 USB 的 Surge Dashboard 无法正常工作以及其他意外的副作用。请谨慎使用。必须与 include-all-networks=true 结合使用。
+# > Bao gồm mạng cục bộ, việc bật tùy chọn này sẽ khiến Surge VIF xử lý các yêu cầu được gửi tới mạng LAN. (Yêu cầu iOS 14.2 trở lên) Việc bật tùy chọn này có thể gây ra sự cố gỡ lỗi AirDrop và Xcode, Bảng điều khiển tăng tốc qua USB không hoạt động bình thường và các tác dụng phụ không mong muốn khác. Vui lòng sử dụng một cách thận trọng. Phải được sử dụng cùng với include-all-networks=true.
 include-local-networks = false
-# > 启用此选项可使 Surge VIF 处理 Apple 推送通知服务 （APNs） 的网络流量。必须与 include-all-networks=true 结合使用。
+# > Việc bật tùy chọn này cho phép Surge VIF xử lý lưu lượng truy cập mạng cho Dịch vụ thông báo đẩy của Apple (APN). Phải được sử dụng cùng với include-all-networks=true.
 include-apns = false
-# > 启用此选项可使 Surge VIF 处理蜂窝服务的 Internet 可路由网络流量。（VoLTE、Wi-Fi 通话、IMS、彩信、可视语音信箱等）.请注意，某些蜂窝运营商会绕过互联网，将蜂窝网络服务流量直接路由到运营商网络。此类蜂窝服务流量始终被排除在隧道之外。必须与 include-all-networks=true 结合使用。
+# > Việc bật tùy chọn này cho phép Surge VIF xử lý lưu lượng truy cập mạng có thể định tuyến trên Internet cho các dịch vụ di động. (VoLTE, Gọi qua Wi-Fi, IMS, MMS, Thư thoại kèm theo hình ảnh, v.v.). Xin lưu ý rằng một số nhà cung cấp dịch vụ di động bỏ qua Internet và định tuyến lưu lượng dịch vụ di động trực tiếp đến mạng của nhà cung cấp dịch vụ di động. Lưu lượng dịch vụ di động như vậy luôn bị loại trừ khỏi đường hầm. Phải được sử dụng cùng với include-all-networks=true.
 include-cellular-services = false
-# > 兼容性模式,此选项用于控制 Surge iOS 的工作模式。
-# > 0：自动，在 5.8.0 之前的 Surge iOS 版本中，这相当于 1，从 5.8.0 开始，它相当于 3
-# > 1：代理接管 + VIF，在此模式下，代理接管的优先级高于 VIF 接管，提供最佳性能，但某些应用程序可能会检查代理设置并拒绝工作。
-# > 2：仅代理接管
-# > 3：VIF Takeover Only：最新版本的默认工作模式。
-# > 4：代理接管 + VIF，但代理使用 VIF 地址而不是环回地址。
-# > 5：代理接管+VIF，但VIF路由使用多个较小的路由进行接管，没有配置默认路由，可以用来绕过一些特殊问题。（例如，HomeKit 安防摄像头）
+# > Chế độ tương thích, tùy chọn này được sử dụng để kiểm soát chế độ làm việc của Surge iOS.
+# > 0：Tự động, trong các phiên bản Surge iOS trước 5.8.0, giá trị này tương đương với 1, bắt đầu từ 5.8.0, nó tương đương với 3
+# > 1：Tiếp quản proxy + VIF, ở chế độ này, tiếp quản proxy được ưu tiên hơn tiếp quản VIF, mang lại hiệu suất tốt nhất nhưng một số ứng dụng có thể kiểm tra cài đặt proxy và từ chối hoạt động.
+# > 2：Chỉ tiếp quản đại lý
+# > 3：VIF Takeover Only：Chế độ làm việc mặc định của phiên bản mới nhất.
+# > 4：Proxy tiếp quản + VIF, nhưng proxy sử dụng địa chỉ VIF thay vì địa chỉ loopback.
+# > 5：Proxy tiếp quản + VIF, nhưng định tuyến VIF sử dụng nhiều tuyến nhỏ hơn để tiếp quản. Không có tuyến mặc định nào được định cấu hình, có thể được sử dụng để vượt qua một số vấn đề đặc biệt. (ví dụ: camera an ninh HomeKit)
 compatibility-mode = 5
-# ================ 仅限 MacOS 的 Surge 参数 ================ #
-# > 如果禁用，即使 Wi-Fi 不是主网络接口，SSID/BSSID 模式仍可匹配。
+# ================ Tăng thông số chỉ dành cho MacOS ================ #
+# > Nếu bị tắt, các mẫu SSID/BSSID sẽ vẫn khớp ngay cả khi Wi-Fi không phải là giao diện mạng chính.
 # use-default-policy-if-wifi-not-primary = false
-# > 遵循 /etc/hosts 中的本地 DNS 映射项
+# > Theo dõi các mục ánh xạ DNS cục bộ trong /etc/hosts
 # read-etc-hosts = true
-# > Surge HTTP 代理服务的端口号
+# > Surge HTTP Số cổng của dịch vụ proxy
 # http-listen = 0.0.0.0:6152
-# > Surge SOCKS5 代理服务的端口号
+# > Surge SOCKS5 Số cổng của dịch vụ proxy
 # socks5-listen = 0.0.0.0:6153
-# > 启用 CPU 调试模式。这可能会降低性能。
+# > Kích hoạt chế độ gỡ lỗi CPU. Điều này có thể làm giảm hiệu suất.
 # debug-cpu-usage = false
-# > 启用内存调试模式。这可能会降低性能。
+# > Bật chế độ gỡ lỗi bộ nhớ. Điều này có thể làm giảm hiệu suất.
 # debug-memory-usage = false
-# > vif模式
-# > auto ：让Surge自动选择最合适的工作模式。
-# > v1 ：传统模式，TCP协议栈完全由Surge管理。由于 Surge 运行在用户空间中，这意味着每个数据包都需要从内核空间传输到用户空间进行处理。
-# > v2 ：在 5.0 版本中引入，它使用 macOS 中的数据包过滤器机制，利用 macOS 的 TCP 协议栈，从而避免了在内核空间和用户空间之间切换的开销，从而显着提高了性能。但是，由于它需要修改 pf 设置，因此它与虚拟机网络和网络共享功能不兼容。
-# > v3 ：在 5.2 版中引入，它绕过了数据包过滤器，并采用另一种技术来使用 macOS 的 TCP 协议栈。性能略低于 v2，但避免了因调整 pf 设置而导致的兼容性问题。
+# > chế độ vif
+# > auto ：Để Surge tự động lựa chọn chế độ làm việc phù hợp nhất.
+# > vif người mẫu
+# > auto ：Để Surge tự động lựa chọn chế độ làm việc phù hợp nhất.
+# > v1 ：Ở chế độ truyền thống, ngăn xếp giao thức TCP được quản lý hoàn toàn bởi Surge. Vì Surge chạy trong không gian người dùng, điều này có nghĩa là mọi gói cần được chuyển từ không gian kernel sang không gian người dùng để xử lý.
+# > v2 ：Được giới thiệu trong phiên bản 5.0, nó sử dụng cơ chế lọc gói trong macOS để tận dụng ngăn xếp giao thức TCP của macOS, nhờ đó tránh được chi phí chuyển đổi giữa không gian kernel và không gian người dùng, từ đó cải thiện đáng kể hiệu suất. Tuy nhiên, vì nó yêu cầu sửa đổi cài đặt pf nên nó không tương thích với các tính năng chia sẻ mạng và mạng máy ảo.
+# > v3 ：Được giới thiệu trong phiên bản 5.2, nó bỏ qua các bộ lọc gói và sử dụng một kỹ thuật khác để sử dụng ngăn xếp TCP của macOS. Hiệu suất thấp hơn một chút so với v2, nhưng tránh được các vấn đề tương thích do điều chỉnh cài đặt pf.
 # vif-mode = v3
 
 [Replica]
