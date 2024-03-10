@@ -101,8 +101,8 @@ ssid-trigger = "Ccccccc":DIRECT,"cellular":RULE,"default":RULE
 [Host]
 
 [Script]
-# 多看阅读  (By @chavyleung)
-# 我的 > 签到任务 等到提示获取 Cookie 成功即可
+# Đọc thêm (By @chavyleung)
+# Của tôi > Tác vụ đăng nhập Đợi cho đến khi lời nhắc lấy cookie thành công
 http-request ^https:\/\/www\.duokan\.com\/checkin\/v0\/status script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/duokan/duokan.cookie.js, requires-body=true, tag=多看_cookie
 cron "16 9 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/duokan/duokan.js, tag=多看阅读
 
