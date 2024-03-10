@@ -27,7 +27,7 @@ Rule: ~
 loglevel = notify
 bypass-system = true
 skip-proxy = 127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,100.64.0.0/10,localhost,*.local,e.crashlytics.com,captive.apple.com,::ffff:0:0:0:0/1,::ffff:128:0:0:0/1
-#DNS设置或根据自己网络情况进行相应设置
+#DNS Cài đặt hoặc thực hiện cài đặt tương ứng theo điều kiện mạng của riêng bạn
 bypass-tun = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12
 dns-server = 119.29.29.29,223.5.5.5
 
@@ -38,40 +38,40 @@ http-request https?:\/\/.*\.iqiyi\.com\/.*authcookie= script-path=https://raw.gi
 {% if request.target == "loon" %}
 
 [General]
-# IPV6 启动与否
+# IPV6 Bắt đầu hay không
 ipv6 = false
-# udp 类的 dns 服务器，用,隔开多个服务器，system 表示系统 dns
+# udp Loại dns Máy chủ, sử dụng, để tách nhiều máy chủ, system Hệ thống đại diện dns
 dns-server = 119.29.29.29, 223.5.5.5
-# DNS over HTTPS服务器，用,隔开多个服务器
+# DNS over HTTPS Máy chủ, sử dụng, để tách nhiều máy chủ
 doh-server = https://223.5.5.5/resolve, https://sm2.doh.pub/dns-query
-# 是否开启局域网代理访问
+# Có bật quyền truy cập proxy mạng LAN hay không
 allow-wifi-access = false
-# 开启局域网访问后的 http 代理端口
+# Mở cổng proxy http sau khi truy cập mạng LAN
 wifi-access-http-port = 7222
-# 开启局域网访问后的 socks5 代理端口
+# Sau khi cho phép truy cập mạng LAN socks5 cổng giao thức
 wifi-access-socks5-port = 7221
-# 测速所用的测试链接，如果策略组没有自定义测试链接就会使用这里配置的
+# Liên kết kiểm tra được sử dụng để kiểm tra tốc độ. Nếu nhóm chính sách không có liên kết kiểm tra tùy chỉnh thì liên kết được định cấu hình ở đây sẽ được sử dụng.
 proxy-test-url = http://connectivitycheck.gstatic.com
-# 节点测速时的超时秒数
+# Hết thời gian chờ giây khi đo tốc độ nút
 test-timeout = 2
-# 指定流量使用哪个网络接口进行转发
+# Chỉ định giao diện mạng nào sẽ sử dụng để chuyển tiếp lưu lượng
 interface-mode = auto
 sni-sniffing = true
-# 禁用 stun 是否禁用 stun 协议的 udp 数据，禁用后可以有效解决 webrtc 的 ip 泄露
+# Tắt stun. Có nên tắt dữ liệu udp của giao thức stun hay không. Việc tắt nó có thể giải quyết hiệu quả tình trạng rò rỉ IP của webrtc.
 disable-stun = true
-# 策略改变时候打断连接
+# Ngắt kết nối khi chính sách thay đổi
 disconnect-on-policy-change = true
-# 一个节点连接失败几次后会进行节点切换，默认 3 次
+# Sau khi kết nối nút không thành công vài lần, việc chuyển đổi nút sẽ được thực hiện, mặc định là 3 lần.
 switch-node-after-failure-times = 3
-# 订阅资源解析器链接
+# Đăng ký liên kết giải quyết tài nguyên
 resource-parser = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Sub-Store/sub-store-parser_for_loon.js
-# 自定义 geoip 数据库的 url
+# Tùy chỉnh url của cơ sở dữ liệu Geoip
 geoip-url = https://gitlab.com/Masaiki/GeoIP2-CN/-/raw/release/Country.mmdb
-# 配置了该参数，那么所配置的这些IP段、域名将不会转发到Loon，而是由系统处理
+# Nếu tham số này được định cấu hình, các phân đoạn IP và tên miền được định cấu hình sẽ không được chuyển tiếp đến Loon mà sẽ được hệ thống xử lý.
 skip-proxy = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, localhost, *.local, captive.apple.com, e.crashlynatics.com
-# 配置了该参数，那么所配置的这些IP段、域名就会不交给Loon来处理，系统直接处理
+# Nếu tham số này được định cấu hình, các phân đoạn IP và tên miền được định cấu hình sẽ không được chuyển giao cho Loon để xử lý mà sẽ được hệ thống xử lý trực tiếp.
 bypass-tun = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.0.0.0/24, 192.0.2.0/24, 192.88.99.0/24, 192.168.0.0/16, 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 239.255.255.250/32, 255.255.255.255/32
-# 当切换到某一特定的WiFi下时改变Loon的流量模式，如"loon-wifi5g":DIRECT，表示在loon-wifi5g这个wifi网络下使用直连模式，"cellular":PROXY，表示在蜂窝网络下使用代理模式，"default":RULE，默认使用分流模式
+#Thay đổi chế độ lưu lượng của Loon khi chuyển sang một WiFi cụ thể, chẳng hạn như "loon-wifi5g":DIRECT, nghĩa là sử dụng chế độ kết nối trực tiếp trong mạng wifi loon-wifi5g, "mobile":PROXY, nghĩa là sử dụng mạng di động Sử dụng chế độ proxy, "mặc định":RULE, sử dụng chế độ giảm tải theo mặc định
 ssid-trigger = "Ccccccc":DIRECT,"cellular":RULE,"default":RULE
 
 [Proxy]
